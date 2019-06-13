@@ -7,16 +7,15 @@ DATA_BIN=/projects/tir3/users/pmichel1/data-bin/wmt14.en-fr.joined-dict.newstest
 MODEL=/projects/tir3/users/pmichel1/checkpoints/wmt14.en-fr.joined-dict.transformer/model.pt
 MOSES_SCRIPTS="~/wd/mosesdecoder/scripts"
 OUT_DIR=output
-SRC_FILE="dev/newstest2013.bpe.en"
-REF_FILE="dev/newstest2013.fr"
-OUT_PREFIX=newstest2013
-EXTRA_OPTIONS="--transformer-mask-all-but-one-head"
+SRC_FILE=${"dev/newstest2013.bpe.en":-1}
+REF_FILE=${"dev/newstest2013.fr":-2}
+OUT_PREFIX=${"newstest2013":-3}
+EXTRA_OPTIONS=${"":-3}
 # Use the following instead for ablating all but one head in a layer
 # OUT_PREFIX=newstest2013.allbut
 # EXTRA_OPTIONS="--transformer-mask-all-but-one-head"
 
-TMP_DIR=/tmp/`uuidgen`
-mkdir $TMP_DIR
+mkdir -p $OUT_DIR
 # Compute base BLEU
 
 cat $SRC_FILE | python fairseq/interactive.py \
