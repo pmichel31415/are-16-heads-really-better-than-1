@@ -11,7 +11,9 @@ First, you will need python >=3.6 with `pytorch>=1.0`. Then, clone our forks of 
 git clone https://github.com/pmichel31415/fairseq
 # Pytorch pretrained BERT
 git clone https://github.com/pmichel31415/pytorch-pretrained-BERT
+cd pytorch-pretrained-BERT
 git checkout paul
+cd ..
 ```
 
 You will also need `sacrebleu` to evaluate BLEU score  (`pip install sacrebleu`).
