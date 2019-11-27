@@ -16,6 +16,8 @@ git checkout paul
 cd ..
 ```
 
+If you are running into issues with pytorch-pretrained-BERT (because you have another version installed globally for instance), check out [this work around](https://github.com/pmichel31415/are-16-heads-really-better-than-1/issues/2#issuecomment-559013710) (thanks @insop).
+
 You will also need `sacrebleu` to evaluate BLEU score  (`pip install sacrebleu`).
 
 ## Ablation experiments
