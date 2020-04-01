@@ -34,7 +34,7 @@ Will fine-tune a pretrained BERT on MNLI (stored in `./models/MNLI`) and perform
 
 ### MT
 
-You can obtain the pretrained WMT model from [this link from the fairseq repo](wget https://s3.amazonaws.com/fairseq-py/models/wmt14.en-fr.joined-dict.transformer.tar.bz2). Use the [Moses tokenizer](https://github.com/moses-smt/mosesdecoder) and [subword-nmt](https://github.com/rsennrich/subword-nmt) in conjunction to the BPE codes provided with the pretrained model to prepair any input file you want. Then run:
+You can obtain the pretrained WMT model from ~~[this link from the fairseq repo](wget https://s3.amazonaws.com/fairseq-py/models/wmt14.en-fr.joined-dict.transformer.tar.bz2)~~ [now this link](https://dl.fbaipublicfiles.com/fairseq/models/wmt14.en-fr.joined-dict.transformer.tar.bz2). Use the [Moses tokenizer](https://github.com/moses-smt/mosesdecoder) and [subword-nmt](https://github.com/rsennrich/subword-nmt) in conjunction to the BPE codes provided with the pretrained model to prepair any input file you want. Then run:
 
 ```bash
 bash experiments/MT/wmt_ablation.sh $BPE_SEGMENTED_SRC_FILE $DETOKENIZED_REF_FILE
